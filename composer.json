@@ -7,8 +7,10 @@
             "CCT\\StudyCartel\\UnitTesting\\": "src/"
         }
     },
-    "require": {
-        "php": "^5.5"
+    "autoload-dev": {
+        "psr-4": {
+            "CCT\\StudyCartel\\UnitTesting\\Tests\\": "tests/"
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0"
