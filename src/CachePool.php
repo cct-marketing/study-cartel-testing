@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace CCT\StudyCartel\UnitTesting;
 
 use CCT\StudyCartel\Exception\ExistingServiceException;
@@ -16,6 +14,8 @@ class CachePool
 
     /**
      * {@inheritdoc}
+     *
+     * @return void
      */
     public function register($identifier, CacheStorageInterface $cacheStorage): void
     {
@@ -35,6 +35,8 @@ class CachePool
 
     /**
      * {@inheritdoc}
+     *
+     * @return void
      */
     public function unregister($identifier): void
     {
@@ -47,6 +49,8 @@ class CachePool
 
     /**
      * {@inheritdoc}
+     *
+     * @return bool
      */
     public function has($identifier): bool
     {
@@ -55,8 +59,10 @@ class CachePool
 
     /**
      * {@inheritdoc}
+     *
+     * @return CacheStorageInterface
      */
-    public function get($identifier): CacheStorageInterface
+    public function get($identifier)
     {
         if (!$this->has($identifier)) {
             throw new NonExistingServiceException('The service %s could not be unregistered.', $identifier);
@@ -67,8 +73,10 @@ class CachePool
 
     /**
      * {@inheritdoc}
+     *
+     * @return array
      */
-    public function all(): array
+    public function all()
     {
         return $this->caches;
     }

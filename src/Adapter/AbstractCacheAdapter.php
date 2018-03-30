@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace CCT\StudyCartel\UnitTesting\Adapter;
 
 use CCT\StudyCartel\UnitTesting\CacheStorageInterface;
