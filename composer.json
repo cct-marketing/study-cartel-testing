@@ -14,5 +14,8 @@
         "phpunit/phpunit": "^7.0"
     },
     "license": "MIT",
-    "require": {}
+    "require": {},
+    "config": {
+        "bin-dir": "bin"
+    }
 }
